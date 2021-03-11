@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BookSite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="bg-dark text-white p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">Professor Hilton's Book Recommendations</div>
+                <div class="col-6 text-right">
+                    <vc:cart-summary />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="container">
+
+        <!--categories-->
+        <vc:navigation-menu />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <p>This is for IS 413</p>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
